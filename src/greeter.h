@@ -10,13 +10,13 @@
  * with a testable public interface.
  */
 class Greeter {
-   public:
+public:
     /**
      * @brief Constructs a Greeter with the given name.
      *
      * @param name The name to include in the greeting. Defaults to "World".
      */
-    explicit Greeter(const std::string& name = "World") : name_(name) {}
+    explicit Greeter(const std::string &name = "World") : name_(name) {}
 
     /**
      * @brief Returns a greeting string.
@@ -25,8 +25,8 @@ class Greeter {
      */
     std::string get_greeting() const { return "Hello, " + name_ + "!"; }
 
-   private:
+private:
     std::string name_;
 };
 
-#endif  // GREETER_H
+#endif // GREETER_H

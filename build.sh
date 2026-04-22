@@ -2,7 +2,13 @@
 set -e
 
 echo "===== Step 1: Check formatting (clang-format) ====="
-find src tests -name '*.cpp' -o -name '*.h' | xargs clang-format --dry-run --Werror
+find src tests \( -name '*.cpp' -o -name '*.h' \) -exec clang-format -i {} +
+if ! git diff --quiet; then
+    echo "ERROR: The following files need formatting:"
+    git diff --name-only
+    git diff
+    exit 1
+fi
 echo "Formatting check passed."
 
 echo ""
