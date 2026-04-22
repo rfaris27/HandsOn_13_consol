@@ -1,0 +1,8 @@
+build/
+docs/
+cmake-build-*/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
