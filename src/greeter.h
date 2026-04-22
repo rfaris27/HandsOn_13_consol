@@ -16,7 +16,7 @@ public:
      *
      * @param name The name to include in the greeting. Defaults to "World".
      */
-    explicit Greeter(const std::string &name = "World") : name_(name) {}
+    explicit Greeter(const std::string& name = "World") : name_(name) {}
 
     /**
      * @brief Returns a greeting string.
